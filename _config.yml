@@ -20,7 +20,7 @@
 
 title: "Art of Learning"
 description: "Empowering students through education."
-url: "https://github.com/Project-Art-of-Learning/art-of-learning.git"  # Replace with your actual URL
+url: "https://art-of-learning.vercel.app/"  # Replace with your actual URL
 baseurl: ""  # Leave empty if hosted on the root domain
 
 theme: minima  # You can replace this with your custom theme or layout if needed
