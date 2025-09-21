@@ -1,0 +1,336 @@
+/* Art of Learning Inspired Styles */
+
+:root {
+  --primary-purple: #9b9bc7;
+  --light-purple: #c4c4e8;
+  --dark-navy: #2c2c2c;
+  --white: #ffffff;
+  --off-white: #fefefe;
+  --text-gray: #4a4a4a;
+  --geometric-purple: rgba(155, 155, 199, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--off-white);
+  color: var(--text-gray);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Geometric Background Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'%3E%3Cg fill='none' stroke='%239b9bc7' stroke-width='1' opacity='0.3'%3E%3Cpolygon points='100,50 150,80 150,140 100,170 50,140 50,80' /%3E%3Cpolygon points='300,150 380,180 380,240 300,270 220,240 220,180' /%3E%3Cpolygon points='800,80 850,110 850,170 800,200 750,170 750,110' /%3E%3Cpolygon points='950,200 1000,230 1000,290 950,320 900,290 900,230' /%3E%3Cpolygon points='600,300 650,330 650,390 600,420 550,390 550,330' /%3E%3Cpolygon points='200,400 250,430 250,490 200,520 150,490 150,430' /%3E%3Cpolygon points='1000,450 1050,480 1050,540 1000,570 950,540 950,480' /%3E%3C/g%3E%3C/svg%3E");
+  background-size: 1200px 800px;
+  background-repeat: repeat;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--dark-navy);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: var(--light-purple);
+}
+
+/* Main Content Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.geometric-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--text-gray);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-purple);
+}
+
+.cta-button:hover {
+  background-color: var(--light-purple);
+  border-color: var(--light-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(155, 155, 199, 0.4);
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.content-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Purple Content Block */
+.purple-block {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: 10px;
+  margin: 3rem 0;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(155, 155, 199, 0.3);
+}
+
+.purple-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.purple-block p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Geometric Decorative Elements */
+.geometric-decoration {
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.geometric-decoration.top-left {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+}
+
+.geometric-decoration.top-right {
+  top: 15%;
+  right: 8%;
+  width: 120px;
+  height: 120px;
+}
+
+.geometric-decoration.bottom-left {
+  bottom: 20%;
+  left: 3%;
+  width: 80px;
+  height: 80px;
+}
+
+.geometric-decoration.bottom-right {
+  bottom: 10%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .content-section,
+  .content-section.reverse {
+    flex-direction: column;
+  }
+  
+  .purple-block {
+    padding: 2rem;
+  }
+  
+  .purple-block h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+nav a:focus,
+.cta-button:focus {
+  outline: 2px solid var(--light-purple);
+  outline-offset: 2px;
+}
+
+/* Loading Animation for Geometric Elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.geometric-decoration {
+  animation: float 6s ease-in-out infinite;
+}
+
+.geometric-decoration:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.geometric-decoration:nth-child(3) {
+  animation-delay: -4s;
+}
