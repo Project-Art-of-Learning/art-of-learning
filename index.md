@@ -5,16 +5,7 @@ title: "Project Art of Learning - Home"
 
 <section class="hero">
     <div class="logo">
-        <svg class="geometric-logo" viewBox="0 0 80 80" fill="none" stroke="#9b9bc7" stroke-width="2">
-            <!-- Hexagonal logo pattern -->
-            <polygon points="40,5 65,20 65,50 40,65 15,50 15,20" fill="none"/>
-            <polygon points="30,15 50,22 50,42 30,50 22,42 22,22" fill="none"/>
-            <polygon points="50,15 70,22 70,42 50,50 42,42 42,22" fill="none"/>
-            <polygon points="40,25 55,30 55,45 40,50 32,45 32,30" fill="none"/>
-            <line x1="40" y1="15" x2="40" y2="35" />
-            <line x1="30" y1="25" x2="50" y2="25" />
-            <line x1="35" y1="35" x2="45" y2="35" />
-        </svg>
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Art of Learning Logo" class="aol-logo">
     </div>
     
     <p class="tagline">Providing students with a clear path to a brighter future.</p>

@@ -15,10 +15,16 @@
             <ul>
                 <li><a href="{{ '/' | relative_url }}">Home</a></li>
                 <li><a href="{{ '/impact' | relative_url }}">Impact</a></li>
-                <li><a href="{{ '/meet-the-team' | relative_url }}">Meet the Team</a></li>
-                <li><a href="{{ '/puerto-rican-branch' | relative_url }}">Puerto Rican Branch</a></li>
-                <li><a href="{{ '/partners-and-sponsors' | relative_url }}">Partners and Sponsors</a></li>
-                <li><a href="{{ '/additional-resources' | relative_url }}">Additional Resources</a></li>
+                <li class="dropdown">
+                    Meet the Team
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ '/team/board' | relative_url }}">Board</a></li>
+                        <li><a href="{{ '/team/alumni' | relative_url }}">Alumni</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ '/branches' | relative_url }}">Branches</a></li>
+                <li><a href="{{ '/partnerships' | relative_url }}">Partnerships</a></li>
+                <li><a href="{{ '/events' | relative_url }}">Events</a></li>
             </ul>
         </nav>
     </header>
