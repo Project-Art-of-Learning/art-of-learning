@@ -1,66 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/impact.html' | relative_url }}">Impact</a></li>
-                <li class="dropdown">
-                    Meet the Team
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ '/team/board.html' | relative_url }}">Board</a></li>
-                        <li><a href="{{ '/team/alumni.html' | relative_url }}">Alumni</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{ '/branches.html' | relative_url }}">Branches</a></li>
-                <li><a href="{{ '/partnerships.html' | relative_url }}">Partnerships</a></li>
-                <li><a href="{{ '/events.html' | relative_url }}">Events</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/impact.html' | relative_url }}">Impact</a></li>
+        <li class="dropdown">
+          Meet the Team
+          <ul class="dropdown-menu">
+            <li><a href="{{ '/team/board.html' | relative_url }}">Board</a></li>
+            <li><a href="{{ '/team/alumni.html' | relative_url }}">Alumni</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/branches.html' | relative_url }}">Branches</a></li>
+        <li><a href="{{ '/partnerships.html' | relative_url }}">Partnerships</a></li>
+        <li><a href="{{ '/events.html' | relative_url }}">Events</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Geometric decorative elements -->
-        <div class="geometric-decoration top-left">
-            <svg viewBox="0 0 100 100" fill="none" stroke="#9b9bc7" stroke-width="1">
-                <polygon points="50,5 85,25 85,65 50,85 15,65 15,25" opacity="0.3"/>
-                <polygon points="35,20 65,30 65,60 35,70 20,60 20,30" opacity="0.3"/>
-            </svg>
-        </div>
-        
-        <div class="geometric-decoration top-right">
-            <svg viewBox="0 0 120 120" fill="none" stroke="#9b9bc7" stroke-width="1">
-                <polygon points="60,10 95,30 95,70 60,90 25,70 25,30" opacity="0.3"/>
-                <polygon points="45,25 75,35 75,65 45,75 30,65 30,35" opacity="0.3"/>
-            </svg>
-        </div>
-        
-        <div class="geometric-decoration bottom-left">
-            <svg viewBox="0 0 80 80" fill="none" stroke="#9b9bc7" stroke-width="1">
-                <polygon points="40,5 65,20 65,50 40,65 15,50 15,20" opacity="0.3"/>
-            </svg>
-        </div>
-        
-        <div class="geometric-decoration bottom-right">
-            <svg viewBox="0 0 150 150" fill="none" stroke="#9b9bc7" stroke-width="1">
-                <polygon points="75,15 115,35 115,85 75,105 35,85 35,35" opacity="0.3"/>
-                <polygon points="60,30 90,40 90,70 60,80 45,70 45,40" opacity="0.3"/>
-            </svg>
-        </div>
-
-        <div class="container">
-            {{ content }}
-        </div>
-    </main>
+  <main>
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
 </body>
 </html>
