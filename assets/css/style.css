@@ -43,7 +43,7 @@ body::before {
 
 /* Header Styles */
 header {
-  background-color: var(--dark-navy);
+  background-color: var(--white);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -71,7 +71,7 @@ nav li {
 }
 
 nav a {
-  color: var(--white);
+  color: var(--dark-navy);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -199,6 +199,11 @@ nav a:hover {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  color: var(--dark-navy); /* make “About us” heading black like the rest */
+}
+
+.purple-block h3 {
+  color: var(--dark-navy);
 }
 
 .purple-block p {
@@ -321,7 +326,7 @@ html {
 .dropdown {
   position: relative;
   display: inline-block;
-  color: var(--white);
+  color: var(--dark-navy);
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
@@ -1082,8 +1087,4 @@ nav a:focus,
   box-shadow: 0 4px 15px rgba(155, 155, 199, 0.4);
 }
 
-/* Header transparency over hero */
-header {
-  background-color: rgba(44, 44, 44, 0.86);
-  backdrop-filter: saturate(130%) blur(4px);
-}
+
