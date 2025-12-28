@@ -9,34 +9,130 @@ title: "Meet Our Board"
 </section>
 
 <section class="board-member-feature">
-    <div class="board-member-container">
-        <div class="board-member-image">
-            <img src="{{ '/assets/images/team/audrey-zheng.jpg' | relative_url }}" alt="Audrey Zheng">
-        </div>
-        <div class="board-member-info">
-            <h2>AUDREY ZHENG</h2>
-            <h3>Vice President of Project Operations</h3>
-            <p>Audrey Zheng is a current senior at Canyon Crest Academy. She is passionate about STEM, especially relating to engineering and robotics. Audrey is the department lead of her school's FRC robotics team which has won awards at both a regional level, and has participated in both electrical engineering and computer science research at different universities.</p>
-            
-            <p>Outside of school, Audrey enjoys drawing, design, and playing varsity golf. She joined Project: Art of Learning in order to help promote accessibility in STEM world-wide and provide others with the opportunity to learn, and, as a result, has been tutoring in math since 2023.</p>
-            
-            <p>As Vice President of Project Operations, Audrey is dedicated to expanding the Art of Learning program to impact even more students world-wide.</p>
-        </div>
+  <div class="board-member-container">
+    <div class="board-member-image">
+      <img id="board-photo" src="{{ '/assets/images/logo.png' | relative_url }}" alt="Board member">
     </div>
-    
-    <div class="navigation-arrows">
-        <button class="nav-arrow prev" onclick="previousMember()">←</button>
-        <button class="nav-arrow next" onclick="nextMember()">→</button>
+    <div class="board-member-info">
+      <h2 id="board-name">BOARD MEMBER</h2>
+      <h3 id="board-role">Role</h3>
+      <div id="board-bio"></div>
     </div>
-</section>
+      <div class="navigation-arrows">
+        <button class="nav-arrow prev" type="button" onclick="previousMember()">←</button>
+        <button class="nav-arrow next" type="button" onclick="nextMember()">→</button>
+      </div>
+    </div>
+  </section>
 
 <script>
-// Add navigation functionality when you have multiple board members
-function previousMember() {
-    // Implementation for previous board member
-}
+  // Board member carousel
+  const boardMembers = [
+    {
+      name: "ELVIN ZHANG",
+      role: "Co-President",
+      // NOTE: No Elvin image was shown in your images list, so this falls back to the logo.
+      img: "{{ '/assets/images/logo.png' | relative_url }}",
+      alt: "Elvin Zhang",
+      bio: [
+        "Elvin is a 12th-grade student at Del Norte High School in San Diego. He has had a strong passion for science research for many years. Besides conducting research at UC San Diego, Elvin has also competed in various research competitions and STEM competitions at state, national, and international levels. Elvin has served in the leadership teams of several organizations and clubs. He is passionate about promoting STEM and educational programs for disadvantaged students, locally and globally."
+      ]
+    },
+    {
+      name: "JONAH LUO",
+      role: "Co-President",
+      img: "{{ '/assets/images/jonah.png' | relative_url }}",
+      alt: "Jonah Luo",
+      bio: [
+        "Jonah Luo is a junior at Del Norte High School with a strong passion for STEM, particularly chemistry. After taking AP Chemistry in his freshman year, he began self-studying organic chemistry and deepened his interest by conducting research on synthetic pathway discovery and optimization at The Scripps Research Institute. He has participated in the USNCO and also enjoys writing poetry, having received multiple Gold Keys from the Scholastic Art & Writing Awards. Outside of academics, Jonah spends his time playing soccer and musical instruments. Through Project Art of Learning, he hopes to make both STEM and humanities education more accessible while inspiring younger students to pursue their passions."
+      ]
+    },
+    {
+      name: "AUDREY ZHENG",
+      role: "Vice President of Project Operations",
+      img: "{{ '/assets/images/audrey_zheng.jpg' | relative_url }}",
+      alt: "Audrey Zheng",
+      bio: [
+        "Audrey Zheng is a current senior at Canyon Crest Academy. She is passionate about STEM, especially relating to engineering and robotics. Audrey is the department lead of her school’s FRC robotics team which has won awards at both a regional level, and has participated in both electrical engineering and computer science research at different universities. Outside of school, Audrey enjoys drawing, design, and playing varsity golf. She joined Project: Art of Learning in order to help promote accessibility in STEM world-wide and provide others with the opportunity to learn, and, as a result, has been tutoring in math since 2023. As Vice President of Project Operations, Audrey is dedicated to expanding the Art of Learning program to impact even more students world-wide."
+      ]
+    },
+    {
+      name: "JENNIFER CHEN",
+      role: "Vice President of Technical Operations",
+      img: "{{ '/assets/images/jennifer.png' | relative_url }}",
+      alt: "Jennifer Chen",
+      bio: [
+        "Hi, I'm Jennifer Chen and I'm a junior at Canyon Crest Academy. For Art of Learning, I tutor both in math and English. I enjoy solving math problems and writing both shortform and longform fictional stories. I've qualified for AIME and have gotten several silver keys from the Scholastic Art and Writing Awards. In my free time, I like to read, sing, and play with my cat."
+      ]
+    },
+    {
+      name: "AUSTIN ZHANG",
+      role: "Director of Math",
+      img: "{{ '/assets/images/austin.jpg' | relative_url }}",
+      alt: "Austin Zhang",
+      bio: [
+        "Austin Zhang is a senior at Del Norte High School. He first discovered his love for math in elementary and middle school through the Mathcounts competitions. He also attended the Art of Problem Solving courses throughout middle school. Today, he is a 3-time AIME qualifier and has competed in various other math competitions. Outside of academics, he loves playing soccer, getting food with his friends, and 3D printing. He joined Project: Art of Learning in order to help disadvantaged students receive equal opportunities in math, and hopes to grow his own love for the subject at the same time."
+      ]
+    },
+    {
+      name: "ETHAN YU",
+      role: "Director of Science",
+      img: "{{ '/assets/images/ethan.jpeg' | relative_url }}",
+      alt: "Ethan Yu",
+      bio: [
+        "Ethan is a Junior at Del Norte High School. Growing up, he was always focused on STEM and participated in a myriad of competitions ranging from Science Olympiad to MATHCOUNTS. However, he discovered his passion for biology after taking AP Biology in his freshman year. Intrigued by the inner workings of the body and function of cells, he grew his passion for biology by co-founding Del Norte's Bio Club to both host the USABO and help other students prepare for it. Alongside the USABO, he also participated in the ARBC, AMC10, and programs such as OPALS. To not let other students face the same learning struggles he did when learning Science, Ethan has assisted in classes at different organizations and co-led other nonprofits providing science workshops for students in the United States. As the Head of Science at AOL, Ethan hopes to create easy-to-follow curricula for younger students and help educate students around the world in science."
+      ]
+    },
+    {
+      name: "MEGAN ZHOU",
+      role: "Director of Languages",
+      img: "{{ '/assets/images/megan_zhou.jpg' | relative_url }}",
+      alt: "Megan Zhou",
+      bio: [
+        "Hi, I’m Megan, and I’m currently a Senior at Canyon Crest Academy! I like the humanities/business, and I love working with students to improve English, whether to brush up on skills or as a foreign language. I have gotten several Scholastic Poetry silver keys as well as been a 2x Just Poetry Quarterly award winner. I have also placed 1st overall at DECA SDC, 5th overall at SCDC, and qualified for ICDC. I’ve also earned awards as a part of Model UN. Outside of school, I love to dance and cook, and I am also fluent in Mandarin. I am excited and dedicated to helping any student with their language learning!"
+      ]
+    },
+    {
+      name: "KUSH SHAH",
+      role: "Director of Computer Science",
+      img: "{{ '/assets/images/kush.jpg' | relative_url }}",
+      alt: "Kush Shah",
+      bio: [
+        "Kush is a Junior at Del Norte High School with a strong passion for computer science. He’s explored these interests through robotics, where he helped lead his team to win FRC’s Impact Award, and by developing full-stack web applications. He has experience teaching engineering concepts to students of various ages at the San Diego Supercomputer Center, making him a great fit for the Director of Computer Science. He’s also conducting research using deep learning to contribute to modeling spaceflight-induced retinal changes. Outside of STEM, Kush enjoys baking and listening to music. "
+      ]
+    }
+  ];
 
-function nextMember() {
-    // Implementation for next board member  
-}
+  let currentIndex = 0;
+
+  function renderMember(index) {
+    const member = boardMembers[index];
+    const photo = document.getElementById('board-photo');
+    const name = document.getElementById('board-name');
+    const role = document.getElementById('board-role');
+    const bio = document.getElementById('board-bio');
+
+    if (!member || !photo || !name || !role || !bio) return;
+
+    photo.src = member.img;
+    photo.alt = member.alt;
+    name.textContent = member.name;
+    role.textContent = member.role;
+
+    // Build paragraphs
+    bio.innerHTML = member.bio.map(p => `<p>${p}</p>`).join('');
+  }
+
+  function previousMember() {
+    currentIndex = (currentIndex - 1 + boardMembers.length) % boardMembers.length;
+    renderMember(currentIndex);
+  }
+
+  function nextMember() {
+    currentIndex = (currentIndex + 1) % boardMembers.length;
+    renderMember(currentIndex);
+  }
+
+  // Initial render
+  document.addEventListener('DOMContentLoaded', () => renderMember(currentIndex));
 </script>
